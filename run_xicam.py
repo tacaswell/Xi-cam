@@ -21,8 +21,8 @@ if ".zip/" in os.__file__:
 
 os.environ["QT_API"] = "pyqt5"
 import qtpy
-from qtpy.QtWidgets import *
-from qtpy.QtCore import *
+from qtpy.QtWidgets import QApplication, QErrorMessage
+from qtpy.QtCore import QCoreApplication
 
 if qtpy.API_NAME == "PyQt5" and "PySide" in sys.modules:
     del sys.modules["PySide"]
